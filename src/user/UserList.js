@@ -44,7 +44,7 @@ const UserList = () => {
             <table className='table table-bordered table-hover'>
                 <thead>
                     <tr className='table-info'>
-                        <th>Iduser</th><th>Username</th><th>Password</th><th>Identity</th><th>Firstname</th><th>Lastname</th><th>Delete</th>
+                        <th>Iduser</th><th>Username</th><th>Identity</th><th>Firstname</th><th>Lastname</th><th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,7 +52,6 @@ const UserList = () => {
                         <tr key={user.iduser}>
                             <td>{user.iduser}</td>
                             <td>{user.username}</td>
-                            <td>{user.password}</td>
                             <td>{user.identity}</td>
                             <td>{user.firstname}</td>
                             <td>{user.lastname}</td>

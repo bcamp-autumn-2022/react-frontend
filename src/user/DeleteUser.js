@@ -11,7 +11,7 @@ const DeleteUser = (props) => {
 
     const [iduser, setIdUser] = useState('');
     const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    // const [password, setPassword] = useState('');
     const [identity, setIdentity] = useState('');
     const [firstname, setFirstname] = useState('');
     const [lastname, setLastname] = useState('');
@@ -34,7 +34,7 @@ const DeleteUser = (props) => {
                 console.log(response.iduser);
 
                 setUsername(response.username);
-                setPassword(response.password);
+                // setPassword(response.password);
                 setIdentity(response.identity);
                 setFirstname(response.firstname);
                 setLastname(response.lastname);
@@ -53,7 +53,7 @@ const DeleteUser = (props) => {
         const data = {
             iduser: id,
             username: username,
-            password: password,
+            // password: password,
             identity: identity,
             firstname: firstname,
             lastname: lastname
@@ -68,7 +68,7 @@ const DeleteUser = (props) => {
             .then(res => {
                 setIdUser('')
                 setUsername('');
-                setPassword('');
+                // setPassword('');
                 setIdentity('');
                 setFirstname('');
                 setLastname('');
@@ -85,14 +85,13 @@ const DeleteUser = (props) => {
             <table className='table table-bordered'>
                 <thead>
                     <tr>
-                    <th>Iduser</th><th>Username</th><th>Password</th><th>Identity</th><th>Firstname</th><th>Lastname</th>
+                    <th>Iduser</th><th>Username</th><th>Identity</th><th>Firstname</th><th>Lastname</th>
                     </tr>
                 </thead>
                 <tbody>
                         <tr>
                             <td>{iduser}</td>
                             <td>{username}</td>
-                            <td>{password}</td>
                             <td>{identity}</td>
                             <td>{firstname}</td>
                             <td>{lastname}</td>

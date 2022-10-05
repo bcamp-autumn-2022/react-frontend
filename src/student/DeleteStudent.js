@@ -5,7 +5,7 @@ import apiURL from '../myURL';
 import { useParams } from 'react-router-dom';
 import { useNavigate, Link } from "react-router-dom";
 
-const SelectedStudent = (props) => {
+const DeleteStudent = (props) => {
     const [loading, setLoading] = useState(true);
     const [isError, setIsError] = useState(false);
     const [idstudent, setIdstudent] = useState('');
@@ -14,7 +14,7 @@ const SelectedStudent = (props) => {
     const {id}=useParams();
     const navigate=useNavigate();
     useEffect(() => {
-        
+
         const fetchData = async () => {
             setLoading(true);
             try {
@@ -89,4 +89,4 @@ const SelectedStudent = (props) => {
     )
 }
 
-export default SelectedStudent;
+export default DeleteStudent;

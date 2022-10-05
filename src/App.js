@@ -4,13 +4,16 @@ import MyClass from './MyClass';
 import MyHook from './MyHook';
 import Login from './Login';
 import StudentList from './student/StudentList';
-import Selectedstudent from './student/SelectedStudent';
-import Deletestudent from './student/DeleteStudent';
+import SelectedStudent from './student/SelectedStudent';
+import DeleteStudent from './student/DeleteStudent';
 import Addstudent from './student/AddStudent';
+
 import UserList from './user/UserList';
 import SelectedUser from './user/SelectedUser'
 import AddUser from './user/AddUser'
 import DeleteUser from './user/DeleteUser'
+
+
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -35,8 +38,8 @@ function App() {
         <Route exact path="/myhook" element={<MyHook fname="Teppo"/>} />
         <Route exact path="/login" element={<Login/>} />
         <Route exact path="/studentlist" element={<StudentList/>} />
-        <Route exact path="/studentlist/selectedstudent/:id" element={<Selectedstudent/>} />
-        <Route exact path="/studentlist/deletestudent/:id" element={<Deletestudent/>} />
+        <Route exact path="/studentlist/selectedstudent/:id" element={<SelectedStudent/>} />
+        <Route exact path="/studentlist/deletestudent/:id" element={<DeleteStudent/>} />
         <Route exact path="/addstudent" element={<Addstudent/>} />
         <Route exact path="/userlist" element={<UserList/>} />
         <Route exact path="/userlist/selecteduser/:id" element={<SelectedUser/>} />
