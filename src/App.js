@@ -7,6 +7,10 @@ import StudentList from './student/StudentList';
 import Selectedstudent from './student/SelectedStudent';
 import Deletestudent from './student/DeleteStudent';
 import Addstudent from './student/AddStudent';
+import UserList from './user/UserList';
+import SelectedUser from './user/SelectedUser'
+import AddUser from './user/AddUser'
+import DeleteUser from './user/DeleteUser'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,6 +25,7 @@ function App() {
           <li> <Link to="/myhook">MyHook</Link>  </li>
           <li> <Link to="/login">Login</Link>  </li>
           <li> <Link to="/studentlist">Students</Link>  </li>
+          <li> <Link to="/userlist">Users</Link>  </li>
         </ul>
         <hr />
       </div>
@@ -33,6 +38,10 @@ function App() {
         <Route exact path="/studentlist/selectedstudent/:id" element={<Selectedstudent/>} />
         <Route exact path="/studentlist/deletestudent/:id" element={<Deletestudent/>} />
         <Route exact path="/addstudent" element={<Addstudent/>} />
+        <Route exact path="/userlist" element={<UserList/>} />
+        <Route exact path="/userlist/selecteduser/:id" element={<SelectedUser/>} />
+        <Route exact path="/userlist/deleteuser/:id" element={<DeleteUser/>} />
+        <Route exact path="/adduser" element={<AddUser/>} />
       </Routes>
     </Router>
 
